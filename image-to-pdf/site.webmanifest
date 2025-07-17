@@ -1,0 +1,111 @@
+{
+    "name": "Free Image to PDF Converter | N&D Co.",
+    "short_name": "Image to PDF",
+    "description": "Convert your images to beautiful PDFs with precision for free and unlimited use.",
+    "start_url": "https://ndcompany.in/tools/image-to-pdf/",
+    "display": "standalone",
+    "background_color": "#f3f4f6",
+    "theme_color": "#fde047",
+    "orientation": "portrait-primary",
+    "scope": "./",
+    "lang": "en",
+    "categories": ["productivity", "utilities"],
+    "icons": [
+        {
+            "src": "https://ndcompany.in/tools/image-to-pdf/src/favicons/favicon-16x16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        },
+        {
+            "src": "https://ndcompany.in/tools/image-to-pdf/src/favicons/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "https://ndcompany.in/tools/image-to-pdf/src/favicons/favicon-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "https://ndcompany.in/tools/image-to-pdf/src/favicons/favicon-128.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        },
+        {
+            "src": "https://ndcompany.in/tools/image-to-pdf/src/favicons/favicon-196x196.png",
+            "sizes": "196x196",
+            "type": "image/png"
+        },
+        {
+            "src": "https://ndcompany.in/tools/image-to-pdf/src/favicons/apple-touch-icon-57x57.png",
+            "sizes": "57x57",
+            "type": "image/png"
+        },
+        {
+            "src": "https://ndcompany.in/tools/image-to-pdf/src/favicons/apple-touch-icon-60x60.png",
+            "sizes": "60x60",
+            "type": "image/png"
+        },
+        {
+            "src": "https://ndcompany.in/tools/image-to-pdf/src/favicons/apple-touch-icon-72x72.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "https://ndcompany.in/tools/image-to-pdf/src/favicons/apple-touch-icon-76x76.png",
+            "sizes": "76x76",
+            "type": "image/png"
+        },
+        {
+            "src": "https://ndcompany.in/tools/image-to-pdf/src/favicons/apple-touch-icon-114x114.png",
+            "sizes": "114x114",
+            "type": "image/png"
+        },
+        {
+            "src": "https://ndcompany.in/tools/image-to-pdf/src/favicons/apple-touch-icon-120x120.png",
+            "sizes": "120x120",
+            "type": "image/png"
+        },
+        {
+            "src": "https://ndcompany.in/tools/image-to-pdf/src/favicons/apple-touch-icon-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "https://ndcompany.in/tools/image-to-pdf/src/favicons/apple-touch-icon-152x152.png",
+            "sizes": "152x152",
+            "type": "image/png"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "https://ndcompany.in/tools/image-to-pdf/screenshot-wide.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "Image to PDF Converter Interface"
+        },
+        {
+            "src": "https://ndcompany.in/tools/image-to-pdf/screenshot-narrow.png",
+            "sizes": "375x812",
+            "type": "image/png",
+            "form_factor": "narrow",
+            "label": "Mobile Image to PDF Converter"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Convert Images",
+            "short_name": "Convert",
+            "description": "Start converting images to PDF",
+            "url": "./",
+            "icons": [
+                {
+                    "src": "https://ndcompany.in/tools/image-to-pdf/favicon-96x96.png",
+                    "sizes": "96x96"
+                }
+            ]
+        }
+    ],
+    "prefer_related_applications": false
+}
