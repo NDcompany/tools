@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Image to PDF Converter | N&D Co.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sortablejs/1.14.0/Sortable.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/style.css">
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://ndcompany.in/tools/image-to-pdf/src/favicons/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://ndcompany.in/tools/image-to-pdf/src/favicons/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://ndcompany.in/tools/image-to-pdf/src/favicons/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://ndcompany.in/tools/image-to-pdf/src/favicons/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://ndcompany.in/tools/image-to-pdf/src/favicons/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://ndcompany.in/tools/image-to-pdf/src/favicons/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://ndcompany.in/tools/image-to-pdf/src/favicons/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://ndcompany.in/tools/image-to-pdf/src/favicons/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="https://ndcompany.in/tools/image-to-pdf/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="https://ndcompany.in/tools/image-to-pdf/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="https://ndcompany.in/tools/image-to-pdf/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://ndcompany.in/tools/image-to-pdf/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="https://ndcompany.in/tools/image-to-pdf/favicon-128.png" sizes="128x128" />
+<meta name="application-name" content="Free Image to PDF Converter | N&D Co."/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="https://ndcompany.in/tools/image-to-pdf/mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="https://ndcompany.in/tools/image-to-pdf/mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="https://ndcompany.in/tools/image-to-pdf/mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="https://ndcompany.in/tools/image-to-pdf/mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="https://ndcompany.in/tools/image-to-pdf/mstile-310x310.png" />
+
+</head>
+<body class="min-h-screen bg-gray-100 relative">
+    <!-- Decorative Stars -->
+    <img src="src/media/sparkle-green.svg" alt="" class="star star-1">
+    <img src="src/media/sparkle-red.svg" alt="" class="star star-2">
+    <img src="src/media/sparkle-green.svg" alt="" class="star star-3">
+    <img src="src/media/sparkle-red.svg" alt="" class="star star-4">
+    <img src="src/media/sparkle-green.svg" alt="" class="star star-5">
+    <img src="src/media/sparkle-red.svg" alt="" class="star star-6">
+    
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <header class="mb-12 text-center">
+            <div class="neo-border inline-block px-8 py-6 mb-4 bg-yellow-300">
+                <h1 class="title-font text-4xl md:text-5xl font-bold mb-2">IMAGE TO PDF</h1>
+                <p class="text-lg">Convert your images to beautiful PDFs with precision for free and unlimited use.</p>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Left Column - Upload & Images -->
+            <div class="lg:col-span-2 space-y-6">
+                <!-- Upload Zone -->
+                <div id="dropzone" class="dropzone neo-border p-8 rounded-lg text-center cursor-pointer bg-white">
+                    <div class="flex flex-col items-center justify-center py-12">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                        </svg>
+                        <h3 class="text-xl font-bold mb-2">Drag & Drop Images Here</h3>
+                        <p class="mb-4">or</p>
+                        <label for="fileInput" class="neo-btn inline-block px-6 py-3 bg-yellow-300 font-bold cursor-pointer">
+                            Select Images
+                        </label>
+                        <input id="fileInput" type="file" accept="image/*" multiple class="hidden">
+                        <p class="mt-4 text-sm text-gray-600">Supports JPG, PNG, WEBP</p>
+                    </div>
+                </div>
+
+                <!-- Image Thumbnails -->
+                <div id="imageContainer" class="hidden">
+                    <div class="neo-border p-6 bg-white rounded-lg">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold">Your Images</h3>
+                            <button id="clearAllBtn" class="neo-btn px-4 py-2 bg-red-100 text-red-800 font-bold text-sm">
+                                Clear All
+                            </button>
+                        </div>
+                        <div id="thumbnailList" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                            <!-- Thumbnails will be added here dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column - Settings & Preview -->
+            <div class="space-y-6">
+                <!-- Settings Panel -->
+                <div class="neo-border p-6 bg-white rounded-lg">
+                    <h3 class="text-xl font-bold mb-4">PDF Settings</h3>
+                    
+                    <div class="space-y-4">
+                        <!-- Page Size -->
+                        <div>
+                            <label class="block font-bold mb-2">Page Size</label>
+                            <select id="pageSize" class="neo-border w-full p-2 bg-white">
+                                <option value="a4">A4 (210 × 297 mm)</option>
+                                <option value="letter">Letter (8.5 × 11 in)</option>
+                                <option value="legal">Legal (8.5 × 14 in)</option>
+                            </select>
+                        </div>
+
+                        <!-- Orientation -->
+                        <div>
+                            <label class="block font-bold mb-2">Orientation</label>
+                            <div class="flex space-x-4">
+                                <label class="flex items-center">
+                                    <input type="radio" name="orientation" value="portrait" checked class="mr-2">
+                                    Portrait
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="orientation" value="landscape" class="mr-2">
+                                    Landscape
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Margins -->
+                        <div>
+                            <label class="block font-bold mb-2">Margins</label>
+                            <select id="margins" class="neo-border w-full p-2 bg-white">
+                                <option value="0">None</option>
+                                <option value="10" selected>Small (10mm)</option>
+                                <option value="20">Medium (20mm)</option>
+                                <option value="30">Large (30mm)</option>
+                            </select>
+                        </div>
+
+                        <!-- Fit Mode -->
+                        <div>
+                            <label class="block font-bold mb-2">Fit Mode</label>
+                            <select id="fitMode" class="neo-border w-full p-2 bg-white">
+                                <option value="fit">Fit to page</option>
+                                <option value="stretch">Stretch</option>
+                                <option value="center">Center</option>
+                                <option value="original">Original size</option>
+                            </select>
+                        </div>
+
+                        <!-- Compression -->
+                        <div class="flex items-center justify-between">
+                            <label class="font-bold">Compress Images</label>
+                            <label class="switch">
+                                <input id="compressToggle" type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                        <!-- Dark Mode -->
+                        <div class="flex items-center justify-between">
+                            <label class="font-bold">Dark Preview</label>
+                            <label class="switch">
+                                <input id="darkModeToggle" type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Preview -->
+                <div id="previewContainer" class="hidden">
+                    <div class="neo-border p-6 bg-white rounded-lg">
+                        <h3 class="text-xl font-bold mb-4">PDF Preview</h3>
+                        <div id="previewPages" class="space-y-4">
+                            <!-- Preview pages will be added here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Export Button -->
+                <button id="exportBtn" class="neo-btn w-full py-4 bg-yellow-300 font-bold text-xl hidden">
+                    EXPORT PDF
+                </button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-16 text-center text-sm">
+            <p>Image to PDF Converter | Neo-Brutalist Design | No data leaves your browser</p>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="src/js/script.js"></script>
+</body>
+</html>
