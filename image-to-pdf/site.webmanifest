@@ -79,14 +79,14 @@
     ],
     "screenshots": [
         {
-            "src": "https://ndcompany.in/tools/image-to-pdf/screenshot-wide.png",
+            "src": "https://ndcompany.in/tools/image-to-pdf/src/screenshots/screenshot-wide.png",
             "sizes": "1280x720",
             "type": "image/png",
             "form_factor": "wide",
             "label": "Image to PDF Converter Interface"
         },
         {
-            "src": "https://ndcompany.in/tools/image-to-pdf/screenshot-narrow.png",
+            "src": "https://ndcompany.in/tools/image-to-pdf/src/screenshots/screenshot-narrow.png",
             "sizes": "375x812",
             "type": "image/png",
             "form_factor": "narrow",
