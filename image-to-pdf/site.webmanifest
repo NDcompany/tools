@@ -75,6 +75,30 @@
             "src": "https://ndcompany.in/tools/image-to-pdf/src/favicons/apple-touch-icon-152x152.png",
             "sizes": "152x152",
             "type": "image/png"
+        },
+        {
+            "src": "https://ndcompany.in/tools/image-to-pdf/src/favicons/favicon-196x196.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "https://ndcompany.in/tools/image-to-pdf/src/favicons/favicon-196x196.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "https://ndcompany.in/tools/image-to-pdf/src/favicons/mstile-310x310.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "https://ndcompany.in/tools/image-to-pdf/src/favicons/mstile-310x310.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
         }
     ],
     "screenshots": [
@@ -101,7 +125,7 @@
             "url": "./",
             "icons": [
                 {
-                    "src": "https://ndcompany.in/tools/image-to-pdf/favicon-96x96.png",
+                    "src": "https://ndcompany.in/tools/image-to-pdf/src/favicons/favicon-96x96.png",
                     "sizes": "96x96"
                 }
             ]
