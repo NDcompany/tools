@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RankGuru - Free SEO Audit Tool</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-yellow-300 font-mono text-black min-h-screen">
+    <!-- Header -->
+    <header class="border-b-4 border-black bg-white p-6">
+        <h1 class="text-6xl font-black text-center uppercase tracking-wider">
+            🚀 RankGuru
+        </h1>
+        <p class="text-xl font-bold text-center mt-2 uppercase">
+            Free · Fast · Honest SEO Audits
+        </p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8 max-w-4xl">
+        <!-- URL Input Section -->
+        <section id="input-section" class="bg-white border-4 border-black p-8 mb-8">
+            <h2 class="text-3xl font-black mb-6 uppercase">Audit Your Website</h2>
+            
+            <!-- Primary URL Input -->
+            <div class="mb-6">
+                <label for="primary-url" class="block text-xl font-bold mb-2 uppercase">
+                    Your Website URL
+                </label>
+                <div class="space-y-3">
+                    <input 
+                        type="url" 
+                        id="primary-url" 
+                        placeholder="https://yourwebsite.com"
+                        class="w-full p-4 text-lg border-4 border-black focus:outline-none focus:border-blue-500"
+                        required
+                    >
+                    <div class="flex gap-2 items-center">
+                        <button onclick="tryDemoMode()" class="brutalist-button bg-yellow-400 text-black px-4 py-2 text-sm font-bold border-2 border-black">
+                            🚀 Try Demo Mode
+                        </button>
+                        <span class="text-sm text-gray-600">Add "demo" to current URL for simulated analysis</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Competitor URLs -->
+            <div class="mb-6">
+                <label class="block text-xl font-bold mb-2 uppercase">
+                    Competitor URLs (Optional - Up to 5)
+                </label>
+                <div id="competitor-inputs">
+                    <input 
+                        type="url" 
+                        class="competitor-url w-full p-4 text-lg border-4 border-black mb-2 focus:outline-none focus:border-blue-500"
+                        placeholder="https://competitor1.com"
+                    >
+                    <input 
+                        type="url" 
+                        class="competitor-url w-full p-4 text-lg border-4 border-black mb-2 focus:outline-none focus:border-blue-500"
+                        placeholder="https://competitor2.com"
+                    >
+                    <input 
+                        type="url" 
+                        class="competitor-url w-full p-4 text-lg border-4 border-black mb-2 focus:outline-none focus:border-blue-500"
+                        placeholder="https://competitor3.com"
+                    >
+                </div>
+            </div>
+
+            <!-- Audit Button -->
+            <button 
+                id="audit-btn" 
+                class="w-full bg-red-500 text-white text-2xl font-black py-4 px-8 border-4 border-black uppercase tracking-wider hover:bg-red-600 hover:scale-105 transition-all mb-4"
+            >
+                🔍 Start Audit
+            </button>
+
+            <!-- Demo Mode -->
+            <div class="bg-yellow-100 border-4 border-black p-4">
+                <h3 class="font-black text-lg mb-2 uppercase">🎯 Demo Mode</h3>
+                <p class="text-sm mb-2">CORS issues preventing analysis? Try these demo URLs:</p>
+                <div class="flex flex-wrap gap-2">
+                    <button class="demo-btn bg-blue-500 text-white px-3 py-1 border-2 border-black text-xs font-bold hover:bg-blue-600" data-url="https://demo1.example.com">Demo Site 1</button>
+                    <button class="demo-btn bg-green-500 text-white px-3 py-1 border-2 border-black text-xs font-bold hover:bg-green-600" data-url="https://demo2.example.com">Competitor Demo</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Loading Section -->
+        <section id="loading-section" class="hidden bg-blue-500 text-white border-4 border-black p-8 mb-8">
+            <div class="text-center">
+                <div class="text-4xl mb-4">⚡</div>
+                <h3 class="text-2xl font-black mb-2 uppercase">Analyzing Your Site...</h3>
+                <p class="text-lg">This might take up to 30 seconds</p>
+                <div class="mt-4">
+                    <div class="bg-white border-2 border-black h-4">
+                        <div id="progress-bar" class="bg-yellow-400 h-full border-r-2 border-black transition-all duration-500" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Error Section -->
+        <section id="error-section" class="hidden bg-red-500 text-white border-4 border-black p-8 mb-8">
+            <div class="text-center">
+                <div class="text-4xl mb-4">❌</div>
+                <h3 class="text-2xl font-black mb-2 uppercase">Oops! Something went wrong</h3>
+                <p id="error-message" class="text-lg"></p>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results-section" class="hidden">
+            <!-- Meta Audit Block -->
+            <div class="bg-white border-4 border-black p-6 mb-6">
+                <h3 class="text-2xl font-black mb-4 uppercase bg-purple-500 text-white p-2 border-2 border-black inline-block">
+                    📝 Meta Tag Audit
+                </h3>
+                <div id="meta-results" class="space-y-2"></div>
+            </div>
+
+            <!-- Keyword Gap Block -->
+            <div class="bg-white border-4 border-black p-6 mb-6">
+                <h3 class="text-2xl font-black mb-4 uppercase bg-green-500 text-white p-2 border-2 border-black inline-block">
+                    🔍 Missing Keywords
+                </h3>
+                <div id="keyword-results" class="space-y-2"></div>
+            </div>
+
+            <!-- Title Analysis Block -->
+            <div class="bg-white border-4 border-black p-6 mb-6">
+                <h3 class="text-2xl font-black mb-4 uppercase bg-blue-500 text-white p-2 border-2 border-black inline-block">
+                    📏 Title Analysis
+                </h3>
+                <div id="title-results" class="space-y-2"></div>
+            </div>
+
+            <!-- Action Items Block -->
+            <div class="bg-white border-4 border-black p-6 mb-6">
+                <h3 class="text-2xl font-black mb-4 uppercase bg-orange-500 text-white p-2 border-2 border-black inline-block">
+                    ⚡ Quick Action Items
+                </h3>
+                <div id="action-results" class="space-y-2"></div>
+            </div>
+
+            <!-- Export Section -->
+            <div class="bg-white border-4 border-black p-6 mb-6">
+                <h3 class="text-2xl font-black mb-4 uppercase">Export Results</h3>
+                <div class="flex gap-4">
+                    <button 
+                        id="export-csv-btn" 
+                        class="bg-green-500 text-white text-lg font-bold py-3 px-6 border-4 border-black uppercase hover:bg-green-600 hover:scale-105 transition-all"
+                    >
+                        📊 CSV Export
+                    </button>
+                    <button 
+                        id="export-html-btn" 
+                        class="bg-blue-500 text-white text-lg font-bold py-3 px-6 border-4 border-black uppercase hover:bg-blue-600 hover:scale-105 transition-all"
+                    >
+                        📄 HTML Export
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t-4 border-black bg-white p-6 mt-12">
+        <div class="text-center">
+            <p class="text-lg font-bold">Made with ❤️ in India by <span class="bg-yellow-300 px-2 border-2 border-black">N&D Co.</span></p>
+            <p class="text-sm mt-2">Free forever • No tracking • Open source</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

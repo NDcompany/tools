@@ -1,0 +1,167 @@
+/* Custom Neobrutalist Styles for RankGuru */
+
+/* Reset and Base */
+* {
+    box-sizing: border-box;
+}
+
+/* Custom Brutalist Components */
+.brutalist-card {
+    background: white;
+    border: 4px solid black;
+    box-shadow: 8px 8px 0px black;
+    transition: all 0.2s ease;
+}
+
+.brutalist-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 12px 12px 0px black;
+}
+
+.brutalist-button {
+    border: 4px solid black;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all 0.2s ease;
+    box-shadow: 4px 4px 0px black;
+}
+
+.brutalist-button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px black;
+}
+
+.brutalist-button:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px black;
+}
+
+.brutalist-input {
+    border: 4px solid black;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.brutalist-input:focus {
+    outline: none;
+    box-shadow: 4px 4px 0px black;
+    transform: translate(-2px, -2px);
+}
+
+/* Issue Severity Styles */
+.issue-high {
+    background-color: #ef4444;
+    color: white;
+    border: 2px solid black;
+    padding: 8px;
+    font-weight: bold;
+}
+
+.issue-medium {
+    background-color: #f97316;
+    color: white;
+    border: 2px solid black;
+    padding: 8px;
+    font-weight: bold;
+}
+
+.issue-low {
+    background-color: #eab308;
+    color: black;
+    border: 2px solid black;
+    padding: 8px;
+    font-weight: bold;
+}
+
+/* Keyword Styles */
+.keyword-item {
+    background-color: #22c55e;
+    color: white;
+    border: 2px solid black;
+    padding: 4px 8px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 2px;
+}
+
+/* Action Item Styles */
+.action-item {
+    background-color: #8b5cf6;
+    color: white;
+    border: 2px solid black;
+    padding: 8px;
+    margin: 4px 0;
+    font-weight: bold;
+}
+
+/* Loading Animation */
+.pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .5;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .text-6xl {
+        font-size: 3rem;
+    }
+    
+    .text-3xl {
+        font-size: 1.875rem;
+    }
+    
+    .p-8 {
+        padding: 1rem;
+    }
+    
+    .px-6 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* Custom Animations */
+@keyframes bounce-in {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.bounce-in {
+    animation: bounce-in 0.6s ease-out;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-in {
+    animation: slide-in 0.4s ease-out;
+}
