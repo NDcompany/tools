@@ -168,6 +168,53 @@ body {
     gap: 0.2rem;
 }
 
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-image {
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-right: 0.75rem;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    object-fit: contain;
+}
+
+.logo-image:hover {
+    transform: scale(1.05);
+}
+
+/* Light mode (white bg): Show dark logo (SYMBOL-LIGHT.png) */
+#navbar-logo-light {
+    display: block;
+}
+
+#navbar-logo-dark {
+    display: none;
+}
+
+/* Dark mode (dark bg): Show white logo (SYMBOL-DARK.png) */
+[data-theme="dark"] #navbar-logo-light {
+    display: none;
+}
+
+[data-theme="dark"] #navbar-logo-dark {
+    display: block;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #333446;
+}
+
+[data-theme="dark"] .logo-text {
+    color: #EAEFEF;
+}
+
+/* Legacy logo styles for backwards compatibility */
 .logo-n { color: var(--color-primary); }
 .logo-and { color: var(--color-accent); }
 .logo-d { color: var(--color-danger); }
@@ -916,6 +963,18 @@ body {
     }
 }
 
+@media (min-width: 641px) and (max-width: 968px) {
+    .logo-image {
+        height: 3rem;
+        width: 3rem;
+        margin-right: 0.75rem;
+    }
+    
+    .logo-text {
+        font-size: 1.6rem;
+    }
+}
+
 @media (max-width: 640px) {
     .hero-title {
         font-size: 2rem;
@@ -952,6 +1011,16 @@ body {
     
     .nav-logo a {
         font-size: 1.5rem;
+    }
+    
+    .logo-image {
+        height: 2rem;
+        width: 2rem;
+        margin-right: 0.5rem;
+    }
+    
+    .logo-text {
+        font-size: 1.2rem;
     }
 }
 
