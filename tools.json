@@ -3,21 +3,21 @@
     "name": "RankGuru",
     "description": "AI-powered SEO Rank Analyzer by N&D Co. Track your website rankings and optimize your SEO strategy.",
     "icon": "",
-    "link": "/RankGuru",
+    "link": "tools/RankGuru",
     "category": "SEO"
   },
   {
     "name": "Invoice Generator",
     "description": "Instantly create and download professional invoices. Simple, fast, and completely free.",
     "icon": "",
-    "link": "/invoice-generator",
+    "link": "tools/invoice-generator",
     "category": "Finance"
   },
   {
     "name": "Image to PDF",
     "description": "Convert your images into high-quality PDFs instantly. Support for multiple formats and batch conversion.",
     "icon": "",
-    "link": "/image-to-pdf",
+    "link": "tools/image-to-pdf",
     "category": "Converter"
   }
 ]
