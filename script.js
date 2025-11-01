@@ -128,6 +128,7 @@ function setupThemeToggle() {
     const currentTheme = localStorage.getItem('theme') || 'light';
     html.setAttribute('data-theme', currentTheme);
     updateThemeIcon(currentTheme);
+    updateLogos(currentTheme);
     
     // Theme toggle click handler
     themeToggle.addEventListener('click', () => {
@@ -141,6 +142,7 @@ function setupThemeToggle() {
         html.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
         updateThemeIcon(newTheme);
+        updateLogos(newTheme);
         
         // Animate icon
         themeIcon.style.transform = 'rotate(360deg)';
@@ -156,6 +158,21 @@ function updateThemeIcon(theme) {
         themeIcon.className = 'fas fa-sun';
     } else {
         themeIcon.className = 'fas fa-moon';
+    }
+}
+
+function updateLogos(theme) {
+    const logoDark = document.getElementById('navbar-logo-dark');
+    const logoLight = document.getElementById('navbar-logo-light');
+    
+    if (!logoDark || !logoLight) return;
+    
+    if (theme === 'dark') {
+        logoDark.style.display = 'none';
+        logoLight.style.display = 'block';
+    } else {
+        logoDark.style.display = 'block';
+        logoLight.style.display = 'none';
     }
 }
 
