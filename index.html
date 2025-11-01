@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore all powerful tools built by N&D Co. - Smart, Powerful, and Built for Everyone.">
+    <meta name="keywords" content="N&D Co, tools, SEO, invoice generator, image to pdf, productivity tools">
+    <meta name="author" content="Nakshatra Ranjan Saha & Dipro Ghosh">
+    <meta name="theme-color" content="#84994F">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="All Tools by N&D Co.">
+    <meta property="og:description" content="Smart, Powerful, and Built for Everyone.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ndcompany.in/tools">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="All Tools by N&D Co.">
+    <meta name="twitter:description" content="Smart, Powerful, and Built for Everyone.">
+    
+    <title>All Tools by N&D Co. | Smart, Powerful Tools</title>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Preconnect to CDNs -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "N&D Co. Tools Portal",
+      "description": "Smart, Powerful, and Built for Everyone.",
+      "url": "https://ndcompany.in/tools",
+      "publisher": {
+        "@type": "Organization",
+        "name": "N&D Co.",
+        "founders": [
+          {
+            "@type": "Person",
+            "name": "Nakshatra Ranjan Saha"
+          },
+          {
+            "@type": "Person",
+            "name": "Dipro Ghosh"
+          }
+        ]
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="loader-circle"></div>
+            <div class="loader-text">N&D Co.</div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/">
+                    <span class="logo-n">N</span><span class="logo-and">&</span><span class="logo-d">D</span>
+                    <span class="logo-co">Co.</span>
+                </a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/about" class="nav-link">About</a>
+                <a href="/blog" class="nav-link">Blog</a>
+                <a href="/privacy-policy" class="nav-link">Privacy Policy</a>
+                <a href="/cookies-policy" class="nav-link">Cookies Policy</a>
+            </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <i class="fas fa-moon" id="themeIcon"></i>
+            </button>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <h1 class="hero-title" data-aos="fade-down" data-aos-duration="1000">
+                All Tools by <span class="highlight">N&D Co.</span>
+            </h1>
+            <div class="hero-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <span id="typewriter"></span>
+            </div>
+            <button class="scroll-btn" id="scrollBtn" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
+                <i class="fas fa-arrow-down"></i>
+                <span>Explore All Tools</span>
+            </button>
+        </div>
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section" id="searchSection">
+        <div class="container">
+            <div class="search-container" data-aos="fade-up" data-aos-duration="800">
+                <div class="search-bar-wrapper">
+                    <i class="fas fa-search search-icon"></i>
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        class="search-input" 
+                        placeholder="Search for tools..." 
+                        autocomplete="off"
+                    >
+                </div>
+                <div class="filters-wrapper">
+                    <select id="categoryFilter" class="filter-select">
+                        <option value="all">All Categories</option>
+                        <option value="SEO">SEO</option>
+                        <option value="Finance">Finance</option>
+                        <option value="Converter">Converter</option>
+                        <option value="Productivity">Productivity</option>
+                        <option value="Design">Design</option>
+                    </select>
+                    <select id="sortFilter" class="filter-select">
+                        <option value="default">Sort by: Default</option>
+                        <option value="az">A – Z</option>
+                        <option value="za">Z – A</option>
+                        <option value="latest">Latest</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Grid Section -->
+    <section class="tools-section" id="toolsSection">
+        <div class="container">
+            <div class="tools-grid" id="toolsGrid">
+                <!-- Tools will be dynamically loaded here -->
+            </div>
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>No tools found</h3>
+                <p>Try adjusting your search or filters</p>
+            </div>
+            <div class="loading-indicator" id="loadingIndicator" style="display: none;">
+                <div class="loading-spinner"></div>
+                <p>Loading more tools...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-large">
+                        <span class="logo-n">N</span><span class="logo-and">&</span><span class="logo-d">D</span>
+                        <span class="logo-co">Co.</span>
+                    </div>
+                    <p class="footer-tagline">Building Tools for Tomorrow</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <a href="/about">About Us</a>
+                        <a href="/blog">Blog</a>
+                        <a href="/contact">Contact</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <a href="/terms">Terms of Service</a>
+                        <a href="/privacy-policy">Privacy Policy</a>
+                        <a href="/cookies-policy">Cookies Policy</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i> Twitter</a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 N&D Co. | Crafted by <span class="highlight">Nakshatra Ranjan Saha</span> & <span class="highlight">Dipro Ghosh</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External Libraries -->
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Vanilla Tilt -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    
+    <!-- Fuse.js for fuzzy search -->
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+    
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
